@@ -1,10 +1,16 @@
 $(document).ready( function(){
 
-/*Se esconde la flecha una vez que carga la pagina*/
+	/*Se esconde la flecha una vez que carga la pagina*/
 	$(".js-back").hide('fast', function() {
 	});
 
-
+	/*Funcion para escribir un texto dentro de un div */
+	function printsNew(){             
+     var texto = document.createElement("p");
+    texto.innerHTML = "NUEVA RECETAS";               
+    $(".callout-news").append(texto);
+	}
+	printsNew();	
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
@@ -47,5 +53,4 @@ function renderActivities(activitiesArray) {
 function renderActivity(recipe) {
 	
 }
-
 
