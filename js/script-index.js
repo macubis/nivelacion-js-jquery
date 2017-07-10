@@ -1,5 +1,11 @@
 $(document).ready( function(){
 
+/*Se esconde la flecha una vez que carga la pagina*/
+	$(".js-back").hide('fast', function() {
+	});
+
+
+
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
